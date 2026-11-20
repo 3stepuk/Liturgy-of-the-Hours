@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hours — a Four-Week Psalter</title>
+<meta name="description" content="The Liturgy of the Hours in the Douay-Rheims Psalms: Office of Readings, Lauds, Daytime Prayer, Vespers and Compline across a four-week psalter. Offline, no accounts, no advertising.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#11100f;--card:#1a1715;--line:#383028;--gold:#c5a059;--cream:#e6dfd5;--muted:#9a9084}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--cream);font-family:Lora,Georgia,serif;line-height:1.65}
+  h1,h2,h3,.display{font-family:Cinzel,serif;letter-spacing:.04em}
+  header{border-bottom:1px solid var(--line);padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  header .t{font-size:13px;letter-spacing:.22em;color:var(--gold)}
+  header nav{display:flex;gap:8px;flex-wrap:wrap}
+  button{font-family:Cinzel,serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:transparent;color:var(--muted);border:1px solid var(--line);padding:8px 12px;border-radius:4px;cursor:pointer}
+  button:hover{color:var(--gold);border-color:var(--gold)}
+  button.on{color:var(--bg);background:var(--gold);border-color:var(--gold)}
+  main{max-width:760px;margin:0 auto;padding:28px 20px 80px}
+  .sub{color:var(--muted);font-size:14px;text-align:center;margin:0 0 22px}
+  section{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:22px;margin:0 0 18px}
+  section h2{margin:0 0 4px;font-size:15px;color:var(--gold);letter-spacing:.16em;text-transform:uppercase}
+  .note{color:var(--muted);font-size:13px;margin:0 0 14px}
+  .psalm{margin:0 0 22px}
+  .psalm h3{margin:0 0 2px;font-size:16px}
+  .psalm .att{color:var(--muted);font-size:12px;font-style:italic;margin:0 0 8px}
+  .verse{font-size:17px}
+  .verse span.n{color:var(--gold);font-size:11px;vertical-align:super;margin-right:3px;font-family:Cinzel,serif}
+  .prayer{font-style:italic;color:var(--cream);border-left:2px solid var(--gold);padding-left:14px;margin:16px 0}
+  footer{border-top:1px solid var(--line);padding:22px;text-align:center;color:var(--muted);font-size:12px}
+  .warn{color:#d9a441;font-size:13px}
+  a{color:var(--gold)}
+  @media print{header,footer,button{display:none}body{background:#fff;color:#000}section{border:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="t">THE HOURS</div>
+  <nav id="hours"></nav>
+</header>
+<main>
+  <p class="sub" id="sub"></p>
+  <div id="weekrow" style="text-align:center;margin-bottom:18px">
+    <button data-w="1">Week I</button>
+    <button data-w="2">Week II</button>
+    <button data-w="3">Week III</button>
+    <button data-w="4">Week IV</button>
+  </div>
+  <div id="out"></div>
+</main>
+<footer>
+  Psalms: <em>Douay–Rheims</em> (Challoner), public domain · Psalter: the four-week cycle of the Liturgy of the Hours<br>
+  Offered freely. Not an official liturgical edition — for prayer, not for the Office in choir.
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
